@@ -29,6 +29,7 @@ public:
     static vector<Equipamento> filtrarEquipamentos(const vector<Equipamento>& equipamentos, const string& criterio);
     static Equipamento* selecionarEquipamento(vector<Equipamento>& equipamentos, string idBusca);
 
+
 };
 
 #endif 
