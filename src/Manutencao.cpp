@@ -19,7 +19,7 @@ string Manutencao::getLocalizacao() const {return localizacao; }
     rm = to_string(rm);
     data = data;
     descricaoServicos = descricaoServicos;
-    pecas.push_back(peca);
+    pecas = pecas;
     status = status;
     localizacao = localizacao;
     
@@ -34,7 +34,7 @@ void Manutencao::listarManutencao(const vector<Manutencao>& manutencao) {
         cout << "RM: " << m.getRm() << endl;
         cout << "Categoria: " << m.getCategoria() << endl;
         cout << "Localizacao: " << m.getLocalizacao() << endl;
-        cout << "Pecas: " << m.getpeças() << endl;
+        cout << "Pecas: " << m.getpecas() << endl;
         cout << "Status: " << m.status << endl;
         cout << "-----------------------------" << endl;
     }
