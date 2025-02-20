@@ -2,29 +2,33 @@
 #define EQUIPAMENTO_HPP
 
 #include <string>
+#include <vector>
+using namespace std;
 
-class Produto{
+class Equipamento{
 
 private:
-    int id;
+    string id;
     string nome;
-    int codigo_interno; 
+    string codigo_interno; 
     string fabricante;
     string modelo;
     string data_de_aquisicao;
 
 public:
-    Produto(const std::string& nome, double preco, int quantidade);
+    Equipamento(const string& _id, const string& _nome, const string& _codigo_interno, const string& _fabricante, const string& _modelo, const string& _data_de_aquisicao);
+    
+    string getId() const;
+    string getNome() const;
+    string getCodigoInterno() const;
+    string getFabricante() const;
+    string getModelo() const;
+    string getDataDeAquisicao() const;
 
-    // Métodos para acessar e definir os atributos
-    void setNome(const std::string& nome);
-    std::string getNome() const;
+    static void listarEquipamentos(const vector<Equipamento>& equipamentos);
+    static vector<Equipamento> filtrarEquipamentos(const vector<Equipamento>& equipamentos, const string& criterio);
+    static Equipamento* selecionarEquipamento(vector<Equipamento>& equipamentos, string idBusca);
 
-    void setPreco(double preco);
-    double getPreco() const;
-
-    void setQuantidade(int quantidade);
-    int getQuantidade() const;
 };
 
 #endif 
