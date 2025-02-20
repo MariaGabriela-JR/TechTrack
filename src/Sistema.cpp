@@ -1,5 +1,6 @@
 #include "Manutencao.hpp"
 #include "Sistema.hpp"
+#include <algorithm>
 #include <iostream>
 
 void Sistema::registrarManutencao(int rm, string data, string descricaoServicos, string peca, string categoria, string status, string localizacao) {
