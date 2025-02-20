@@ -57,20 +57,20 @@ private:
     string RM; 
     string Categoria;
     string Localizacao;
-    std::vector<string *> pecas;
+    string pecas; //virou apenas string
 
     string status;
 
 
 public:
-    Manutencao(const int& _id, const string& _data, const string& _rm, const string& _categoria, const string& _localizacao, /*std::vector<string *> _pecas,*/ const string& _status);
+    Manutencao(const int& _id, const string& _data, const string& _rm, const string& _categoria, const string& _localizacao, const string& _pecas, const string& _status);
     
     int getId() const;
     string getData() const;
     string getRm() const;
     string getCategoria() const;
     string getLocalizacao() const;
-    string getpeças() const;
+    string getpecas() const;
 
 
     //getters e setters
@@ -81,7 +81,7 @@ public:
     //Cliente* getCliente();
 
 
-    void registrarManutencao(int rm, string data, string descricaoServiços, string *peças, string categoria, string status, string localizacao);
+    void registrarManutencao(int rm, string data, string descricaoServiços, string peças, string categoria, string status, string localizacao);
 
     static void listarManutencao(const vector<Manutencao>& manutencao);
 
