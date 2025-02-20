@@ -6,9 +6,12 @@
 class Produto{
 
 private:
-    std::string nome;
-    double preco;
-    int quantidade;
+    int id;
+    string nome;
+    int codigo_interno; 
+    string fabricante;
+    string modelo;
+    string data_de_aquisicao;
 
 public:
     Produto(const std::string& nome, double preco, int quantidade);
@@ -24,4 +27,4 @@ public:
     int getQuantidade() const;
 };
 
-#endif /* PRODUTO_HPP */
+#endif 
