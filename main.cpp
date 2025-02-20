@@ -19,9 +19,9 @@ int main() {
 
     ///// MANTENÇÕES BANCO DE DADOS /////
 
-    Manutencao manutencao01 (001, "01-05-2022","A", "categoria1","campo mourao", "pecas1","urgente1");
-    Manutencao manutencao02 (002, "02-06-2022","B", "categoria2","campo mourao","pecas2","urgente2");
-    Manutencao manutencao03 (003, "03-09-2022","C", "categoria3","campo mourao","pecas3","urgente3");
+    Manutencao manutencao01 ("001", "01-05-2022","A", "categoria1","campo mourao", "pecas1","urgente1");
+    Manutencao manutencao02 ("002", "02-06-2022","B", "categoria2","campo mourao","pecas2","urgente2");
+    Manutencao manutencao03 ("003", "03-09-2022","C", "categoria3","campo mourao","pecas3","urgente3");
     
     return 0;
 }
