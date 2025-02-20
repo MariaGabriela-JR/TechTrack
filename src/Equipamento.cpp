@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Equipamento.hpp"
+#include "../header/Equipamento.hpp"
 
 Equipamento::Equipamento(const string& _id, const string& _nome, const string& _codigo_interno, const string& _fabricante, 
                         const string& _modelo, const string& _data_de_aquisicao) 

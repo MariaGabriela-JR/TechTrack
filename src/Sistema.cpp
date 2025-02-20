@@ -1,9 +1,14 @@
-#include "Manutencao.hpp"
-#include "Sistema.hpp"
+#include "../header/Manutencao.hpp"
+#include "../header/Cliente.hpp"
+#include "../header/Equipamento.hpp"
+
+#include "../header/Sistema.hpp"
+
 #include <iostream>
+#include <algorithm>
 
 void Sistema::registrarManutencao(int rm, string data, string descricaoServicos, string peca, string categoria, string status, string localizacao) {
-    
+
     rm = rm;
     data = data;
     descricaoServicos = descricaoServicos;
@@ -55,3 +60,10 @@ void Sistema::alterarStatusManutencao(Manutencao& manutencao, const string& novo
 }
 
 
+
+/// Home ///
+//1- consultar manutenção ---> listar
+//2- alterar status de manutenção --> consultar manutencao --> selecionar manutencao -->alterar
+//3- registrar manutenção --> equipamento, manutencao, salvar manutencao() --> mensagem de sucesso
+//4- sair
+//

@@ -31,6 +31,7 @@ class Manutencao{
         string getCategoria() const;
         string getStatus() const;
         string getLocalizacao() const;
+
 };
 
 #endif 

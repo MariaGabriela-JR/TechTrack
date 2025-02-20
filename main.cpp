@@ -1,7 +1,7 @@
-#include "header/Sistema.hpp"
-#include "header/Cliente.hpp"
-#include "header/Equipamento.hpp"
-#include "header/Manutencao.hpp"
+#include "./header/Sistema.hpp"
+#include "./header/Cliente.hpp"
+#include "./header/Equipamento.hpp"
+#include "./header/Manutencao.hpp"
 
 int main() {
 
@@ -17,11 +17,9 @@ int main() {
     Equipamento equipamento02 ("FRS585H6T", "Soft Starter 2000", "SS67890", "Siemens", "ATS48C21", "15-12-2024");
     Equipamento equipamento03 ("FFV5874WD", "Inversor de Frequência 5000", "IF12345", "Siemens", "Sinamics G120", "05-07-2020");
 
-    ///// MANTENÇÕES BANCO DE DADOS /////
 
-    Manutencao manutencao01 ("001", "01-05-2022","A", "categoria1","campo mourao", "pecas1","urgente1");
-    Manutencao manutencao02 ("002", "02-06-2022","B", "categoria2","campo mourao","pecas2","urgente2");
-    Manutencao manutencao03 ("003", "03-09-2022","C", "categoria3","campo mourao","pecas3","urgente3");
-    
+
+    ///// SISTEMA /////
+
     return 0;
 }
