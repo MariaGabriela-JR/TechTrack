@@ -19,7 +19,10 @@ class Manutencao{
 
     public:
         Manutencao(const string& _rm, const string& _data, const string& _descricao_de_servico, const string& _pecas, const string& _categoria, const string& _status, const string& _localizacao);
+
         
+        void setStatus(const std::string& novoStatus);
+        void setLocalizacao(const std::string& novaLocalizacao);
     
         string getRm() const;
         string getData() const;

@@ -48,9 +48,10 @@ Manutencao* Sistema::selecionarManutencao(vector<Manutencao>& manutencao, string
 
     return nullptr;
 }
-/*
+
 void Sistema::alterarStatusManutencao(Manutencao& manutencao, const string& novoStatus, const string& novaLocalizacao) {
-    manutencao.status = novoStatus;
-    manutencao.localizacao = novaLocalizacao;
+    manutencao.setStatus(novoStatus);
+    manutencao.setLocalizacao(novaLocalizacao);
 }
-*/
+
+
