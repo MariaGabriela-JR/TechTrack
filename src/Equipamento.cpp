@@ -13,35 +13,6 @@ string Equipamento::getFabricante() const { return fabricante; }
 string Equipamento::getModelo() const { return modelo; }
 string Equipamento::getDataDeAquisicao() const { return data_de_aquisicao; }
 
-// Listar equipamentos
-void Equipamento::listarEquipamentos(const vector<Equipamento>& equipamentos) {
-    for (const auto& equipamento : equipamentos) {
-        cout << "ID: " << equipamento.getId()
-             << ", Nome: " << equipamento.getNome()
-             << ", Código Interno: " << equipamento.getCodigoInterno()
-             << ", Fabricante: " << equipamento.getFabricante()
-             << ", Modelo: " << equipamento.getModelo()
-             << ", Data de Aquisição: " << equipamento.getDataDeAquisicao() << endl;
-    }
-}
 
-// Filtrar equipamentos por nome
-vector<Equipamento> Equipamento::filtrarEquipamentos(const vector<Equipamento>& equipamentos, const string& criterio) {
-    vector<Equipamento> resultado;
-    for (const auto& equipamento : equipamentos) {
-        if (equipamento.getNome().find(criterio) != string::npos) {
-            resultado.push_back(equipamento);
-        }
-    }
-    return resultado;
-}
 
-// Selecionar equipamento por ID
-Equipamento* Equipamento::selecionarEquipamento(vector<Equipamento>& equipamentos, string idBusca) {
-    for (auto& equipamento : equipamentos) {
-        if (equipamento.getId() == idBusca) {
-            return &equipamento;
-        }
-    }
-    return nullptr;
-}
+

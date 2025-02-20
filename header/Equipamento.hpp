@@ -24,12 +24,6 @@ public:
     string getFabricante() const;
     string getModelo() const;
     string getDataDeAquisicao() const;
-
-    static void listarEquipamentos(const vector<Equipamento>& equipamentos);
-    static vector<Equipamento> filtrarEquipamentos(const vector<Equipamento>& equipamentos, const string& criterio);
-    static Equipamento* selecionarEquipamento(vector<Equipamento>& equipamentos, string idBusca);
-
-
 };
 
 #endif 

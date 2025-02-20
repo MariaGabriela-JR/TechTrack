@@ -4,10 +4,10 @@
 ///// CLIENTE /////
 
 Cliente::Cliente(const int& _id, const string& _nome_da_empresa, const string& _razao_social, 
-                 const string& _cnpj, const string& _endereco, const string& _telefone, const string& _email, 
-                 const string& _ramo_de_negocio)
-    : id(_id), nome_da_empresa(_nome_da_empresa), razao_social(_razao_social), cnpj(_cnpj), 
-      endereco(_endereco), telefone(_telefone), email(_email), ramo_de_negocio(_ramo_de_negocio) {}
+const string& _cnpj, const string& _endereco, const string& _telefone, const string& _email, 
+const string& _ramo_de_negocio)
+: id(_id), nome_da_empresa(_nome_da_empresa), razao_social(_razao_social), cnpj(_cnpj), 
+endereco(_endereco), telefone(_telefone), email(_email), ramo_de_negocio(_ramo_de_negocio) {}
 
 int Cliente::getId() const {return id;}
 string Cliente::getNomeDaEmpresa() const {return nome_da_empresa;}
