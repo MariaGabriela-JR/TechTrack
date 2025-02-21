@@ -51,7 +51,7 @@
             
             // Operação 05 - Listar equipamentos
             
-            void listarEquipamentos() const;
+            void Sistema::listarEquipamentos(const std::vector<Equipamento>& equipamentos);
            
 
             // Operação 06 - Filtrar equipamentos

@@ -54,9 +54,9 @@ void Sistema::alterarStatusManutencao(Manutencao& manutencao, const string& novo
 
 // Operação 05 - Listar equipamentos
 
-
+/*
 void Sistema::listarEquipamentos(const std::vector<Equipamento>& equipamentos) {
-    
+    std::cout << "ID: " << equipamento[1].getId() << std::endl;
     for (size_t i = 0; i < equipamentos.size(); ++i) {
         const Equipamento& equipamento = equipamentos[i];
         std::cout << "ID: " << equipamento.getId()
@@ -65,6 +65,22 @@ void Sistema::listarEquipamentos(const std::vector<Equipamento>& equipamentos) {
                   << ", Fabricante: " << equipamento.getFabricante()
                   << ", Modelo: " << equipamento.getModelo()
                   << ", Data de Aquisição: " << equipamento.getDataDeAquisicao() << std::endl;
+    }
+}*/
+
+void Sistema::listarEquipamentos(const std::vector<Equipamento>& equipamentos) {
+    if (equipamentos.size() > 1) {
+        std::cout << "ID: " << equipamentos[1].getId() << std::endl;
+    }
+
+    for (size_t i = 0; i < equipamentos.size(); ++i) {
+        const Equipamento& e = equipamentos[i];
+        std::cout << "ID: " << e.getId()
+                  << ", Nome: " << e.getNome()
+                  << ", Código Interno: " << e.getCodigoInterno()
+                  << ", Fabricante: " << e.getFabricante()
+                  << ", Modelo: " << e.getModelo()
+                  << ", Data de Aquisição: " << e.getDataDeAquisicao() << std::endl;
     }
 }
 
