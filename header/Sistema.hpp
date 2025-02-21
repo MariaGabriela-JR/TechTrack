@@ -60,11 +60,12 @@
 
             // Operação 07 - Selecionar equipamento
 
-            static Equipamento* selecionarEquipamento(vector<Equipamento>& equipamentos, const string& _id);
+            Equipamento* selecionarEquipamento(const string& _id);
 
             // Operação 08 - Registrar manutenção
 
-            
+            void Sistema::registrarManutencao(int rm, string data, string descricaoServicos, string peca, string categoria, string status, string localizacao);
+
     };
 
     #endif
