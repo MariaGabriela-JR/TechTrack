@@ -29,12 +29,14 @@ int main() {
     };
 
     ///// MANUTENÇÕES BANCO DE DADOS /////
-        Manutencao manutencao01("ID0111", "12-03-2020", "troca de pecas", "painel soft starter", "urgente", "laudo aprovado", "sala 02, prateleira B5");
-        Manutencao manutencao02("ID0112", "15-06-2021", "lavagem e remontagem", " ", "sem urgencia", "laudo arovado", "Sala 02, prateleira E3");
-        Manutencao manutencao03("ID0113", "30-03-2022", "Limpeza", " ", "sem urgencia", "Aguardando aprovacao de laudo", "sala temporaria");
+        
 
 
-    vector<Manutencao> manutencoes = {};
+    vector<Manutencao> manutencoes = {
+        Manutencao("ID0111", "12-03-2020", "troca de pecas", "painel soft starter", "urgente", "laudo aprovado", "sala 02, prateleira B5"),
+        Manutencao("ID0112", "15-06-2021", "lavagem e remontagem", " ", "sem urgencia", "laudo arovado", "Sala 02, prateleira E3"),
+        Manutencao("ID0113", "30-03-2022", "Limpeza", " ", "sem urgencia", "Aguardando aprovacao de laudo", "sala temporaria")
+    };
 
     Sistema sistema;
     
@@ -54,7 +56,7 @@ int main() {
     sistema.listarManutencao(manutencoes);
     sistema.filtrarManutencao(manutencoes, "ID0111");
     sistema.selecionarManutencao(manutencoes, "ID0111");
-    sistema.alterarStatusManutencao(manutencao01, "em teste", "sala de testes");
+    sistema.alterarStatusManutencao(manutencoes[0], "em teste", "sala de testes");
 
     // Caso de uso 03 - Consultar manutenção
 
