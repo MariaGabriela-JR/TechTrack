@@ -27,7 +27,11 @@ int main() {
         Equipamento("FRS585H6T", "Soft Starter 2000", "SS67890", "Siemens", "ATS48C21", "15-12-2024"),
         Equipamento("FFV5874WD", "Inversor de Frequência 5000", "IF12345", "Siemens", "Sinamics G120", "05-07-2020")
     };
+
+    
     vector<Manutencao> manutencoes = {};
+
+
     // Criando uma instância do Sistema
     Sistema sistema;
     
@@ -39,7 +43,7 @@ int main() {
 
     // Caso de uso 01 - Registrar Manutenção
     sistema.filtrarEquipamentos(equipamentos, "Soft Starter 1000");
-    sistema.selecionarEquipamento(equipamentos ,"ATS48D62Y");
+    sistema.selecionarEquipamento(equipamentos, "ATS48D62Y");
     
     sistema.registrarManutencao(manutencoes,"RM1", "21/20", "muitotrabalho", "peça1", "cateogria", "muitourgente", "campo mourao");
     // Caso de uso 02 - Alterar status de manutenção
