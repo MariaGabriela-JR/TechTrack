@@ -57,9 +57,10 @@ void Sistema::alterarStatusManutencao(Manutencao& manutencao, const string& novo
 // Operação 05 - Listar equipamentos
 
 
-void Sistema::listarEquipamentos(const std::vector<Equipamento>& equipamento) {
+void Sistema::listarEquipamentos(const std::vector<Equipamento>& equipamentos) {
     
-    for (const auto& equipamento : equipamentos) {
+    for (size_t i = 0; i < equipamentos.size(); ++i) {
+        const Equipamento& equipamento = equipamentos[i];
         std::cout << "ID: " << equipamento.getId()
                   << ", Nome: " << equipamento.getNome()
                   << ", Código Interno: " << equipamento.getCodigoInterno()
