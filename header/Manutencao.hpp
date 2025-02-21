@@ -23,7 +23,12 @@ class Manutencao{
         
         void setStatus(const std::string& novoStatus);
         void setLocalizacao(const std::string& novaLocalizacao);
-    
+        void setRm(const std::string& novoRm);
+        void setData(const std::string& novaData);
+        void setDescricaoDeServico(const std::string& novaDescricao);
+        void setPecas(const std::string& novasPecas);
+        void setCategoria(const std::string& novaCategoria);
+
         string getRm() const;
         string getData() const;
         string getDescricaoDeServico() const;
@@ -32,6 +37,7 @@ class Manutencao{
         string getStatus() const;
         string getLocalizacao() const;
 
+        
 };
 
 #endif 

@@ -6,7 +6,11 @@ Manutencao::Manutencao(const string& _rm, const string& _data, const string& _de
 
 void Manutencao::setStatus(const std::string& novoStatus) { status = novoStatus; }
 void Manutencao::setLocalizacao(const std::string& novaLocalizacao) { localizacao = novaLocalizacao; }
-
+void Manutencao::setRm(const std::string& novoRm) { rm = novoRm; }
+void Manutencao::setData(const std::string& novaData) { data = novaData; }
+void Manutencao::setDescricaoDeServico(const std::string& novaDescricao) { descricao_de_servico = novaDescricao; }
+void Manutencao::setPecas(const std::string& novasPecas) { pecas = novasPecas; }
+void Manutencao::setCategoria(const std::string& novaCategoria) { categoria = novaCategoria; }
 
 string Manutencao::getRm() const { return rm; }
 string Manutencao::getData() const { return data; }
@@ -15,3 +19,4 @@ string Manutencao::getPecas() const { return pecas; }
 string Manutencao::getCategoria() const { return categoria; }
 string Manutencao::getStatus() const {return status; }
 string Manutencao::getLocalizacao() const {return localizacao; }
+

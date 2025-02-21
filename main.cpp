@@ -30,9 +30,28 @@ int main() {
 
     // Criando uma instância do Sistema
     Sistema sistema;
-    
+    //std::cout << "ID: " << equipamentos[0].getId() << std::endl;
     // Passando a lista de equipamentos para a instância do Sistema
-    sistema.listarEquipamentos();  // Chamando o método listarEquipamentos
+    sistema.listarEquipamentos(equipamentos);  // Chamando o método listarEquipamentos
+    
+    
+        //CASOS DE USO//
 
+    // Caso de uso 01 - Registrar Manutenção
+    //sistema.filtrarEquipamentos(equipamentos, "Soft Starter 1000");
+
+    
+    // Caso de uso 02 - Alterar status de manutenção
+
+
+
+    //void alterarStatusManutencao(const string& rm, const string& novoStatus, const string& novaLocalizacao);
+
+    // Caso de uso 03 - Consultar manutenção
+
+
+
+    //void consultarManutencao(const string& rm);
+    
     return 0;
 }

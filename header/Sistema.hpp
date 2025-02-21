@@ -18,9 +18,6 @@
 
             // Caso de uso 01 - Registrar Manutenção
 
-            void registrarManutencao(const string& rm, const string& data, const string& descricaoServicos,
-                const string& peca, const string& categoria, const string& status,
-                const string& localizacao);
             
             // Caso de uso 02 - Alterar status de manutenção
 
@@ -28,6 +25,7 @@
 
             // Caso de uso 03 - Consultar manutenção
 
+            void consultarManutencao(const string& rm);
 
             // OPERAÇÕES // 
 
@@ -41,7 +39,7 @@
 
             // Operação 03 - Selecionar manutenção
 
-            Manutencao* Sistema::selecionarManutencao(vector<Manutencao>& manutencao, string rmBusca);
+            Manutencao* selecionarManutencao(vector<Manutencao>& manutencao, string rmBusca);
 
 
             // Operação 04 - Alterar status da manutenção
@@ -51,7 +49,7 @@
             
             // Operação 05 - Listar equipamentos
             
-            void listarEquipamentos() const;
+            void listarEquipamentos(const std::vector<Equipamento>& equipamento);
            
 
             // Operação 06 - Filtrar equipamentos
@@ -64,7 +62,7 @@
 
             // Operação 08 - Registrar manutenção
 
-            
+            void registrarManutencao(const string& rm, const string& data, const string& descricaoServicos, const string& peca, const string& categoria, const string& status, const string& localizacao);
     };
 
     #endif
