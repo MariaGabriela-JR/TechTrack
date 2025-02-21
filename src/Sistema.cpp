@@ -91,7 +91,7 @@ Equipamento* Sistema::selecionarEquipamento(const vector<Equipamento>& equipamen
     return nullptr;
 }
 
-// Operação 08 - Registrar manutenção
+// Operação 08 - Registrar manutenção 
 
 void Sistema::registrarManutencao(vector<Manutencao>& manutencao, const string& rm, const string& data, const string& descricaoServicos, const string& peca, const string& categoria, const string& status, const string& localizacao) {
     Manutencao novaManutencao;
