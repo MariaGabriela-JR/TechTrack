@@ -2,10 +2,8 @@
 #include "../header/Cliente.hpp"
 #include "../header/Equipamento.hpp"
 #include "../header/Sistema.hpp"
-
 #include <iostream>
 #include <algorithm>
-
 
 
 // Operação 01 - Listar manutenções
@@ -57,21 +55,20 @@ void Sistema::alterarStatusManutencao(Manutencao& manutencao, const string& novo
 // Operação 05 - Listar equipamentos
 
 
-void Sistema::listarEquipamentos(const std::vector<Equipamento>& equipamento) {
-    
+void Sistema::listarEquipamentos() const {
     for (const auto& equipamento : equipamentos) {
-        std::cout << "ID: " << equipamento.getId()
-                  << ", Nome: " << equipamento.getNome()
-                  << ", Código Interno: " << equipamento.getCodigoInterno()
-                  << ", Fabricante: " << equipamento.getFabricante()
-                  << ", Modelo: " << equipamento.getModelo()
-                  << ", Data de Aquisição: " << equipamento.getDataDeAquisicao() << std::endl;
+        cout << "ID: " << equipamento.getId()
+             << ", Nome: " << equipamento.getNome()
+             << ", Código Interno: " << equipamento.getCodigoInterno()
+             << ", Fabricante: " << equipamento.getFabricante()
+             << ", Modelo: " << equipamento.getModelo()
+             << ", Data de Aquisição: " << equipamento.getDataDeAquisicao() << endl;
     }
 }
 
 // Operação 06 - Filtrar equipamentos
 
-vector<Equipamento> Sistema::filtrarEquipamentos(const vector<Equipamento>& equipamentos, const string& criterio) {
+static vector<Equipamento> filtrarEquipamentos(const vector<Equipamento>& equipamentos, const string& criterio){
     vector<Equipamento> resultado;
     for (const auto& equipamento : equipamentos) {
         if (equipamento.getNome().find(criterio) != string::npos) {
@@ -83,7 +80,7 @@ vector<Equipamento> Sistema::filtrarEquipamentos(const vector<Equipamento>& equi
 
 // Operação 07 - Selecionar equipamento
 
-Equipamento* Sistema::selecionarEquipamento(vector<Equipamento>& equipamentos, const string& _id) {
+Equipamento* Sistema::selecionarEquipamento(const string& _id) {
     for (auto& equipamento : equipamentos) {
         if (equipamento.getId() == _id) {
             return &equipamento;
@@ -94,18 +91,18 @@ Equipamento* Sistema::selecionarEquipamento(vector<Equipamento>& equipamentos, c
 
 // Operação 08 - Registrar manutenção
 
-void registrarManutencao(Manutencao& manutencao, const string& rm, const string& data, const string& descricaoServicos, const string& peca, const string& categoria, const string& status, const string& localizacao) {
+void Sistema::registrarManutencao(int rm, string data, string descricaoServicos, string peca, string categoria, string status, string localizacao) {
 
-    manutencao.setStatus(rm);
-    manutencao.setData(data);
-    manutencao.setDescricaoDeServico(descricaoServicos);
-    manutencao.setPecas(peca);
-    manutencao.setStatus(status);
-    manutencao.setLocalizacao(localizacao);
-
+    rm = rm;
+    data = data;
+    descricaoServicos = descricaoServicos;
+    peca = peca;
+    status = status;
+    localizacao = localizacao;
+    
     cout << "Manutencao registrada com sucesso!" << endl;
-}
 
+}
 
 
 /// Home ///
