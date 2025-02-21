@@ -19,7 +19,7 @@
             // Operação 01 - Listar manutenção
 
             void listarManutencao(const vector<Manutencao>& manutencao);
-
+            void listarUmaManutencao(Manutencao& m);
             // Operação 02 - Filtrar manutenção
 
             static vector<Manutencao> filtrarManutencao(const vector<Manutencao>& manutencao, const string& criterio);

@@ -43,18 +43,25 @@ int main() {
 
     // Caso de uso 01 - Registrar Manutenção
     sistema.filtrarEquipamentos(equipamentos, "Soft Starter 1000");
+    
     sistema.selecionarEquipamento(equipamentos, "ATS48D62Y");
     
     sistema.registrarManutencao(manutencoes,"RM1", "21/20", "muitotrabalho", "peça1", "cateogria", "muitourgente", "campo mourao");
     // Caso de uso 02 - Alterar status de manutenção
 
-    
+    sistema.listarManutencao(manutencoes);
+
+    sistema.selecionarManutencao(manutencoes,"RM1");
+
+    sistema.alterarStatusManutencao(manutencoes[0], "novoStatus", "maringa");
 
     // Caso de uso 03 - Consultar manutenção
 
+    sistema.listarManutencao(manutencoes);
 
+    sistema.selecionarManutencao(manutencoes,"RM1");
 
-    //void consultarManutencao(const string& rm);
+    sistema.listarUmaManutencao(manutencoes[0]);
     
     return 0;
 }

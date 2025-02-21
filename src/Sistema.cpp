@@ -19,7 +19,17 @@ void Sistema::listarManutencao(const vector<Manutencao>& manutencaos) {
         cout << "-----------------------------" << endl;
     }
 }
+void Sistema::listarUmaManutencao(Manutencao& m) {
 
+        cout << "Data: " << m.getData() << endl;
+        cout << "RM: " << m.getRm() << endl;
+        cout << "Categoria: " << m.getCategoria() << endl;
+        cout << "Localizacao: " << m.getLocalizacao() << endl;
+        cout << "Pecas: " << m.getPecas() << endl;
+        cout << "Status: " << m.getStatus() << endl;
+        cout << "-----------------------------" << endl;
+    
+}
 // Operação 02 - Filtrar manutenções
 
 vector<Manutencao> Sistema::filtrarManutencao(const vector<Manutencao>& manutencoes, const string& criterio) {
