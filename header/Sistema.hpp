@@ -62,7 +62,7 @@
 
             // Operação 08 - Registrar manutenção
 
-            void registrarManutencao(const string& rm, const string& data, const string& descricaoServicos, const string& peca, const string& categoria, const string& status, const string& localizacao);
+            void registrarManutencao(vector<Manutencao>& manutencao, const string& rm, const string& data, const string& descricaoServicos, const string& peca, const string& categoria, const string& status, const string& localizacao);
     };
 
     #endif

@@ -10,8 +10,9 @@
 
 // Operação 01 - Listar manutenções
 
-void Sistema::listarManutencao(const vector<Manutencao>& manutencao) {
-    for (const auto& m : manutencao) {
+void Sistema::listarManutencao(const vector<Manutencao>& manutencaos) {
+    for (size_t i = 0; i < manutencaos.size(); ++i) {
+        const Manutencao& m = manutencaos[i];
         cout << "Data: " << m.getData() << endl;
         cout << "RM: " << m.getRm() << endl;
         cout << "Categoria: " << m.getCategoria() << endl;
@@ -95,22 +96,16 @@ Equipamento* Sistema::selecionarEquipamento(vector<Equipamento>& equipamentos, c
 
 // Operação 08 - Registrar manutenção
 
-void registrarManutencao(Manutencao& manutencao, const string& rm, const string& data, const string& descricaoServicos, const string& peca, const string& categoria, const string& status, const string& localizacao) {
+void registrarManutencao(vector<Manutencao>& manutencao, const string& rm, const string& data, const string& descricaoServicos, const string& peca, const string& categoria, const string& status, const string& localizacao) {
+    Manutencao novaManutencao;
+    novaManutencao.setStatus(rm);
+    novaManutencao.setData(data);
+    novaManutencao.setDescricaoDeServico(descricaoServicos);
+    novaManutencao.setPecas(peca);
+    novaManutencao.setStatus(status);
+    novaManutencao.setLocalizacao(localizacao);
 
-    manutencao.setStatus(rm);
-    manutencao.setData(data);
-    manutencao.setDescricaoDeServico(descricaoServicos);
-    manutencao.setPecas(peca);
-    manutencao.setStatus(status);
-    manutencao.setLocalizacao(localizacao);
-
+    manutencao.push_back(novaManutencao);
+    
     cout << "Manutencao registrada com sucesso!" << endl;
 }
-
-
-
-/// Home ///
-//1- consultar manutenção ---> listar
-//2- alterar status de manutenção --> consultar manutencao --> selecionar manutencao -->alterar
-//3- registrar manutenção --> equipamento, manutencao, salvar manutencao() --> mensagem de sucesso
-//4- sair

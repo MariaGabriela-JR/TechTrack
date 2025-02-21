@@ -19,6 +19,7 @@ class Manutencao{
 
     public:
         Manutencao(const string& _rm, const string& _data, const string& _descricao_de_servico, const string& _pecas, const string& _categoria, const string& _status, const string& _localizacao);
+        Manutencao() : rm(""), data(""), descricao_de_servico(""), pecas(""), categoria(""), status(""), localizacao("") {}
 
         
         void setStatus(const std::string& novoStatus);
