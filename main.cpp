@@ -28,7 +28,7 @@ int main() {
         Equipamento("FFV5874WD", "Inversor de Frequência 5000", "IF12345", "Siemens", "Sinamics G120", "05-07-2020")
     };
 
-    
+
     vector<Manutencao> manutencoes = {};
 
 
@@ -49,8 +49,6 @@ int main() {
     // Caso de uso 02 - Alterar status de manutenção
 
     
-
-    //void alterarStatusManutencao(const string& rm, const string& novoStatus, const string& novaLocalizacao);
 
     // Caso de uso 03 - Consultar manutenção
 
